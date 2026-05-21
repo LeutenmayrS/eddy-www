@@ -1,0 +1,200 @@
+/* =========================================================
+   Eddy Design System — Colors & Type
+   Single source of truth for tokens. Import this anywhere.
+   ========================================================= */
+
+/* ---------- Fonts ---------- */
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("fonts/NunitoSans-VariableFont.ttf") format("truetype-variations");
+  font-weight: 200 1000;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("fonts/NunitoSans-Italic-VariableFont.ttf") format("truetype-variations");
+  font-weight: 200 1000;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  /* =====================================================
+     COLORS
+     ===================================================== */
+
+  /* River Blues — primary palette */
+  --eddy-50:  #EEF5F9;
+  --eddy-100: #D6E6EF;
+  --eddy-200: #AECDDE;
+  --eddy-300: #7EB0C9;
+  --eddy-400: #4E91B2;
+  --eddy-500: #2E7A9E;   /* PRIMARY */
+  --eddy-600: #235F7D;
+  --eddy-700: #1B4B64;   /* PRIMARY DARK — nav / header chrome */
+  --eddy-800: #143848;
+  --eddy-900: #0E2A37;
+
+  /* Warm complementaries */
+  --sand-50:  #FBF7F1;   /* onboarding background */
+  --sand-100: #F4ECDD;
+  --sand-200: #E8D8BE;
+  --sand-300: #D4BA92;
+  --sand-400: #B89867;
+  --wood-700: #6B4E2E;
+
+  --sunset-400: #E8893F;
+  --sunset-500: #D46F24;  /* ACCENT — max one moment per screen */
+  --sunset-600: #B85A18;
+
+  /* Neutrals (slightly warm) */
+  --neutral-0:   #FFFFFF;
+  --neutral-25:  #FAFBFC;   /* app BG */
+  --neutral-50:  #F4F6F8;
+  --neutral-100: #E7ECEF;
+  --neutral-200: #D3DBDF;
+  --neutral-300: #B3BEC5;
+  --neutral-400: #8997A0;
+  --neutral-500: #667480;
+  --neutral-600: #4B5862;   /* icon default */
+  --neutral-700: #35404A;
+  --neutral-800: #1F2830;
+  --neutral-900: #0F151B;
+
+  /* Semantic */
+  --signal:    #2E7A9E;   /* = primary */
+  --success:   #3F8A5C;   /* forest */
+  --warn:      #C98A26;
+  --danger:    #9B2F3A;   /* burgundy */
+  --danger-600:#7E2530;
+
+  /* Group palette (10) — all WCAG AA ≥ 4.5:1 with white text */
+  --group-1:  #2A6685;   /* deep blue */
+  --group-2:  #2B8080;   /* dark teal */
+  --group-3:  #3F8251;   /* forest green */
+  --group-4:  #6F823A;   /* olive */
+  --group-5:  #A23849;   /* burgundy */
+  --group-6:  #6E4A94;   /* deep purple */
+  --group-7:  #5B6973;   /* slate */
+  --group-8:  #A06E3B;   /* sand brown */
+  --group-9:  #C25A28;   /* rust */
+  --group-10: #4D5BB2;   /* indigo */
+
+  /* Semantic surface tokens (mid-level) */
+  --bg-app:        var(--neutral-25);
+  --bg-surface:    var(--neutral-0);
+  --bg-tinted:     var(--eddy-50);
+  --bg-onboarding: var(--sand-50);
+  --bg-chrome:     var(--eddy-700);
+  --bg-display:    var(--eddy-900);    /* public display / Teil 7 */
+
+  --fg-default:    var(--neutral-800);
+  --fg-muted:      var(--neutral-500);
+  --fg-soft:       var(--neutral-400);
+  --fg-on-chrome:  var(--neutral-0);
+  --fg-link:       var(--eddy-500);
+
+  --border-soft:   var(--neutral-200);
+  --border-strong: var(--neutral-300);
+  --focus-ring:    rgba(46, 122, 158, 0.28);   /* primary 28% */
+
+  /* Shadow base — primary-dark tinted, never pure black */
+  --shadow-xs:    0 1px 2px rgba(20, 56, 72, 0.06);
+  --shadow-sm:    0 2px 6px rgba(20, 56, 72, 0.08);
+  --shadow-md:    0 6px 16px rgba(20, 56, 72, 0.10);
+  --shadow-lg:    0 18px 40px rgba(20, 56, 72, 0.16);
+  --shadow-inset: inset 0 2px 4px rgba(20, 56, 72, 0.18);
+
+  /* =====================================================
+     RADII / SPACING — 4px base
+     ===================================================== */
+  --radius-tag:        4px;
+  --radius-control:    10px;   /* buttons, inputs */
+  --radius-list-card:  14px;
+  --radius-tile:       20px;   /* dashboard tiles */
+  --radius-pill:       999px;
+
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;   /* page gutter mobile */
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-7:  32px;
+  --space-8:  40px;
+  --space-9:  56px;   /* header height */
+
+  --hit-min:  44px;
+
+  /* =====================================================
+     MOTION
+     ===================================================== */
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-in:  cubic-bezier(0.55, 0, 0.68, 0.53);
+  --ease-io:  cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+  --dur-page: 250ms;
+
+  /* =====================================================
+     TYPE — Nunito Sans only
+     ===================================================== */
+  --font-sans: "Nunito Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: var(--font-sans);   /* same family, larger size + tighter tracking */
+  --font-tabular: var(--font-sans);   /* with font-variant-numeric: tabular-nums */
+
+  /* Scale (mobile-first) */
+  --fs-caption: 12px;
+  --fs-small:   14px;
+  --fs-body:    16px;
+  --fs-lead:    18px;
+  --fs-h3:      20px;
+  --fs-h2:      24px;
+  --fs-h1:      28px;
+  --fs-display: 36px;
+  --fs-hero:    48px;
+
+  --lh-tight:   1.15;
+  --lh-snug:    1.30;
+  --lh-normal:  1.50;
+  --lh-relaxed: 1.65;
+
+  --tr-ui:      -0.015em;
+  --tr-display: -0.020em;
+  --tr-label:    0.080em;   /* tracked small caps labels (KEHRWASSER, DO-1) */
+}
+
+/* =========================================================
+   Base
+   ========================================================= */
+html, body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  color: var(--fg-default);
+  background: var(--bg-app);
+  letter-spacing: var(--tr-ui);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* =========================================================
+   Semantic type tokens — use as classes
+   ========================================================= */
+.eddy-display { font-size: var(--fs-display); font-weight: 400; line-height: var(--lh-tight); letter-spacing: var(--tr-display); }
+.eddy-hero    { font-size: var(--fs-hero);    font-weight: 400; line-height: var(--lh-tight); letter-spacing: var(--tr-display); }
+.eddy-h1      { font-size: var(--fs-h1);      font-weight: 700; line-height: var(--lh-tight); letter-spacing: var(--tr-ui); }
+.eddy-h2      { font-size: var(--fs-h2);      font-weight: 700; line-height: var(--lh-snug);  letter-spacing: var(--tr-ui); }
+.eddy-h3      { font-size: var(--fs-h3);      font-weight: 600; line-height: var(--lh-snug);  letter-spacing: var(--tr-ui); }
+.eddy-lead    { font-size: var(--fs-lead);    font-weight: 400; line-height: var(--lh-normal); }
+.eddy-body    { font-size: var(--fs-body);    font-weight: 400; line-height: var(--lh-normal); }
+.eddy-body-strong { font-size: var(--fs-body); font-weight: 600; line-height: var(--lh-normal); }
+.eddy-small   { font-size: var(--fs-small);   font-weight: 400; line-height: var(--lh-normal); color: var(--fg-muted); }
+.eddy-caption { font-size: var(--fs-caption); font-weight: 500; line-height: var(--lh-snug);  color: var(--fg-muted); }
+.eddy-label   {
+  font-size: var(--fs-caption); font-weight: 700; line-height: var(--lh-snug);
+  letter-spacing: var(--tr-label); text-transform: uppercase; color: var(--fg-muted);
+}
+.eddy-tabular { font-variant-numeric: tabular-nums; }
+.eddy-data    { font-variant-numeric: tabular-nums; font-weight: 600; letter-spacing: 0; }
